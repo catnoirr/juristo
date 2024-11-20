@@ -1,254 +1,42 @@
-"use client";
-import { useState, useEffect, useRef } from "react";
-import { useRouter } from "next/navigation";
+import React from 'react';
 
-const Navbar = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(null); // Dropdown state
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false); // Mobile menu state
-  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(null); // Mobile dropdown state
-  const dropdownRef = useRef(null);
-  const router = useRouter();
-
-  const dropdownOptions = {
-    Products: [
-      { name: "Product 1", path: "/products/product-1" },
-      { name: "Product 2", path: "/products/product-2" },
-      { name: "Product 3", path: "/products/product-3" },
-    ],
-    Solutions: [
-      { name: "Solution 1", path: "/solutions/solution-1" },
-      { name: "Solution 2", path: "/solutions/solution-2" },
-      { name: "Solution 3", path: "/solutions/solution-3" },
-    ],
-    Services: [
-      { name: "Service 1", path: "/services/service-1" },
-      { name: "Service 2", path: "/services/service-2" },
-      { name: "Service 3", path: "/services/service-3" },
-    ],
-    "Help Center": [
-      { name: "FAQ", path: "/help-center/faq" },
-      { name: "Contact Us", path: "/help-center/contact" },
-      { name: "Support", path: "/help-center/support" },
-    ],
-  };
-
-  const toggleDropdown = (index) => {
-    setDropdownOpen(dropdownOpen === index ? null : index);
-  };
-
-  const toggleMobileDropdown = (index) => {
-    setMobileDropdownOpen(mobileDropdownOpen === index ? null : index);
-  };
-
-  const handleNavigation = (path) => {
-    router.push(path);
-    setDropdownOpen(null); // Close dropdowns
-    setMobileDropdownOpen(null); // Close mobile dropdowns
-    setMobileMenuOpen(false); // Close mobile menu
-  };
-
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setDropdownOpen(null);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
+const LegalPracticeAI = () => {
   return (
-    <nav className="bg-juristo border-b border-gray-200 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <button
-              onClick={() => handleNavigation("/")}
-              className="text-xl font-bold text-gray-800"
-            >
-              Juristo
+    <div className="bg-juristo   flex  justify-center">
+      <div className=" mx-auto flex flex-col lg:flex-row   items-center lg:items-center space-y-6 lg:space-y-0 lg:space-x-10 md:pl-28 pl-4  w-full">
+        {/* Left Section */}
+        <div className=" lg:text-left mt-7 px-4  ">
+          <h2 className="text-sm font-bold text-gray-600 uppercase tracking-wide">Juristo</h2>
+          <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-800 leading-tight mt-2 ">
+            Simplify Legal Practice <br /> <span className="text-4xl">with AI</span>
+          </h1>
+          <p className="mt-4 text-chatButton ">
+            Empower law students and professionals with real-time learning. Simplify complex cases and stay updated with AI-generated summaries.
+          </p>
+          <div className="mt-6 flex space-x-4">
+            <button className="px-6 py-3 bg-chatButton text-white rounded-md  focus:outline-none font-semibold">
+              Chat Now
+            </button>
+            <button className="px-6 py-3 border-2 border-chatButtonBorder font-semibold rounded-md hover:bg-indigo-50 focus:outline-none">
+              API Docs
             </button>
           </div>
+        </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-6 items-center" ref={dropdownRef}>
-            {Object.keys(dropdownOptions).map((menu, index) => (
-              <div key={index} className="relative">
-                <button
-                  onClick={() => toggleDropdown(index)}
-                  className="flex items-center text-black hover:text-gray-800"
-                >
-                  {menu}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4 ml-1"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </button>
-                {/* Dropdown Menu */}
-                {dropdownOpen === index && (
-                  <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg rounded-md z-10">
-                    {dropdownOptions[menu].map((option, optionIndex) => (
-                      <button
-                        key={optionIndex}
-                        onClick={() => handleNavigation(option.path)}
-                        className="block px-4 py-2 text-gray-600 hover:bg-gray-100 w-full text-left"
-                      >
-                        {option.name}
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-            <button
-              onClick={() => handleNavigation("/pricing")}
-              className="text-black hover:text-gray-800"
-            >
-              Pricing
-            </button>
-            <button
-              onClick={() => handleNavigation("/login")}
-              className="text-black hover:text-gray-800"
-            >
-              Log In
-            </button>
-            <button
-              onClick={() => handleNavigation("/signup")}
-              className="border-2 border-black px-4 py-2 rounded-xl hover:border-gray-400 "
-            >
-              Sign Up Now
-            </button>
+        {/* Right Section */}
+        <div className="">
+          <div className="">
+            <img
+              src="/hero_img.png" // Replace with actual image
+              alt="Scales of justice"
+              className="w-full h-full object-cover"
+            />
           </div>
-
-          {/* Mobile Hamburger */}
-          <div className="flex md:hidden">
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-gray-600 hover:text-gray-800 focus:outline-none"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              </svg>
-            </button>
-          </div>
+          
         </div>
       </div>
-
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="fixed top-0 right-0 w-64 h-full bg-white shadow-lg z-20 transition-transform transform translate-x-0">
-          <div className="p-4">
-            <button
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-gray-600 hover:text-gray-800 focus:outline-none mb-4"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-            <nav className="space-y-4">
-              {Object.keys(dropdownOptions).map((menu, index) => (
-                <div key={index}>
-                  <button
-                    onClick={() => toggleMobileDropdown(index)}
-                    className="font-semibold text-gray-800 flex justify-between w-full"
-                  >
-                    {menu}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                  {mobileDropdownOpen === index && (
-                    <ul className="ml-4 mt-2 space-y-2">
-                      {dropdownOptions[menu].map((option, optionIndex) => (
-                        <li key={optionIndex}>
-                          <button
-                            onClick={() => handleNavigation(option.path)}
-                            className="block text-gray-600 hover:text-gray-800"
-                          >
-                            {option.name}
-                          </button>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-              <button
-                onClick={() => handleNavigation("/pricing")}
-                className="block text-gray-600 hover:text-gray-800"
-              >
-                Pricing
-              </button>
-              <button
-                onClick={() => handleNavigation("/login")}
-                className="block text-gray-600 hover:text-gray-800"
-              >
-                Log In
-              </button>
-              <button
-                onClick={() => handleNavigation("/signup")}
-                className="block text-gray-600 hover:text-gray-800"
-              >
-                Sign Up Now
-              </button>
-            </nav>
-          </div>
-        </div>
-      )}
-
-      {/* Overlay */}
-      {mobileMenuOpen && (
-        <div
-          onClick={() => setMobileMenuOpen(false)}
-          className="fixed inset-0 bg-black bg-opacity-50 z-10"
-        ></div>
-      )}
-    </nav>
+    </div>
   );
 };
 
-export default Navbar;
+export default LegalPracticeAI;

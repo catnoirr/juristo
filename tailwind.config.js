@@ -9,6 +9,8 @@ module.exports = {
     extend: {
       colors: {
         juristo: "#F1F5F9",
+        chatButton: "#0F172A",
+        chatButtonBorder: "#0F172A"
       },
     },
   },
