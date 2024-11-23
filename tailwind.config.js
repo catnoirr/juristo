@@ -10,7 +10,8 @@ module.exports = {
       colors: {
         juristo: "#F1F5F9",
         chatButton: "#0F172A",
-        chatButtonBorder: "#0F172A"
+        chatButtonBorder: "#0F172A",
+        gridcolor: "#0A0118",
       },
     },
   },

@@ -24,7 +24,7 @@ const SwiperComponent = () => {
         <SwiperSlide>
         <div className="flex flex-col md:flex-row  rounded-lg shadow-lg overflow-hidden p-6 py-8 items-center">
       {/* Left Section: Image */}
-      <div className="">
+      <div className=" rounded-xl">
         <img
           src="/chatbot.png" // Replace with your actual image path
           alt="Chatbot interface preview"
@@ -53,7 +53,7 @@ const SwiperComponent = () => {
         <SwiperSlide>
         <div className="flex flex-col md:flex-row  rounded-lg shadow-lg overflow-hidden p-6 py-8 items-center">
       {/* Left Section: Image */}
-      <div className="">
+      <div className="rounded-xl">
         <img
           src="/chatbot.png" // Replace with your actual image path
           alt="Chatbot interface preview"
@@ -82,7 +82,7 @@ const SwiperComponent = () => {
         <SwiperSlide>
         <div className="flex flex-col md:flex-row  rounded-lg shadow-lg overflow-hidden p-6 py-8 items-center">
       {/* Left Section: Image */}
-      <div className="">
+      <div className="rounded-2xl ">
         <img
           src="/chatbot.png" // Replace with your actual image path
           alt="Chatbot interface preview"
