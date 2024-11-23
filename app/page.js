@@ -4,6 +4,7 @@ import LegalServices from "./components/LegalServices";
 import ValueProposition from "./components/ValueProposition";
 import WhatWeProvide from "./components/WhatWeProvide";
 import Benefits from "./components/Benefits";
+import FAQ from "./components/FAQ";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <ValueProposition />
         <WhatWeProvide />
         <Benefits />
+        <FAQ />
       </main>
     </div>
   );
