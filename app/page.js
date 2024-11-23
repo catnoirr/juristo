@@ -5,6 +5,7 @@ import ValueProposition from "./components/ValueProposition";
 import WhatWeProvide from "./components/WhatWeProvide";
 import Benefits from "./components/Benefits";
 import FAQ from "./components/FAQ";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <WhatWeProvide />
         <Benefits />
         <FAQ />
+        <Footer />
       </main>
     </div>
   );
