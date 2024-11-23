@@ -2,7 +2,7 @@ import React from "react";
 
 const LegalServices = () => {
   return (
-    <div className=" md:px-8 rounded-lg">
+    <div className="md:px-8 px-2 rounded-lg">
       {/* Image Section */}
       <div className="relative">
         <img

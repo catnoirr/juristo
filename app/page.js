@@ -1,6 +1,8 @@
 import Hero from "./components/Hero";
 import LegalServices from "./components/LegalServices";
-import Draft from "./components/Draft";
+// import Draft from "./components/Draft";
+import ValueProposition from "./components/ValueProposition";
+import WhatWeProvide from "./components/WhatWeProvide";
 
 export default function Home() {
   return (
@@ -8,7 +10,9 @@ export default function Home() {
       <main>
         <Hero />
         <LegalServices />
-        <Draft />
+        {/* <Draft /> */}
+        <ValueProposition />
+        <WhatWeProvide />
       </main>
     </div>
   );
