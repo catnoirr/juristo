@@ -2,7 +2,7 @@ import React from 'react';
 
 const Benefits = () => {
   return (
-    <div className="px-4 py-8 ">
+    <div className="md:p-20  p-6">
       <h2 className="text-5xl font-bold text-center text-black mb-8">Benefits  with smart indicators</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <div className="bg-gridcolor  rounded-3xl shadow-lg pb-6">

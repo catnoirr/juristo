@@ -2,7 +2,7 @@ import React from 'react';
 
 const LegalPracticeAI = () => {
   return (
-    <div className="bg-juristo   flex  justify-center">
+    <div className="bg-juristo   flex  justify-center py-16">
       <div className=" mx-auto flex flex-col lg:flex-row   items-center lg:items-center space-y-6 lg:space-y-0 lg:space-x-10 md:pl-28 pl-4  w-full">
         {/* Left Section */}
         <div className=" lg:text-left mt-7 px-4  ">
