@@ -25,7 +25,7 @@ const Navbar = () => {
       { name: "Service 2", path: "/services/service-2" },
       { name: "Service 3", path: "/services/service-3" },
     ],
-    "Help Center": [
+    "Help ": [
       { name: "FAQ", path: "/help-center/faq" },
       { name: "Contact Us", path: "/help-center/contact" },
       { name: "Support", path: "/help-center/support" },
@@ -66,12 +66,12 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex gap-4 flex-shrink-0">
-            <img src="/logo.png" alt="" onClick={() => handleNavigation("/")} className="cursor-pointer" />
+            <img src="/aayu.png" alt="" onClick={() => handleNavigation("/")} className="cursor-pointer w-16 h-16" />
             <button
               onClick={() => handleNavigation("/")}
               className="text-xl font-bold text-gray-800"
             >
-              Juristo
+              Aayu
             </button>
           </div>
 
