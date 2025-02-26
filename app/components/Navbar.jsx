@@ -61,7 +61,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-juristo border-b border-gray-200 shadow-sm">
+    <nav className="bg-gradient-to-r from-[#EDF4F8] to-[#FDF1F1] border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -69,7 +69,7 @@ const Navbar = () => {
             <img src="/aayu.png" alt="" onClick={() => handleNavigation("/")} className="cursor-pointer w-16 h-16" />
             <button
               onClick={() => handleNavigation("/")}
-              className="text-xl font-bold text-gray-800"
+              className="text-xl font-bold text-[#E57F84]"
             >
               Aayu
             </button>
@@ -81,7 +81,7 @@ const Navbar = () => {
               <div key={index} className="relative">
                 <button
                   onClick={() => toggleDropdown(index)}
-                  className="flex items-center text-black hover:text-gray-800"
+                  className="flex items-center text-[#4A90A7] hover:text-[#2C5364] transition-colors duration-200"
                 >
                   {menu}
                   <svg
@@ -104,7 +104,7 @@ const Navbar = () => {
                       <button
                         key={optionIndex}
                         onClick={() => handleNavigation(option.path)}
-                        className="block px-4 py-2 text-gray-600 hover:bg-gray-100 w-full text-left"
+                        className="block px-4 py-2 text-[#4A90A7] hover:bg-[#EDF4F8] w-full text-left transition-colors duration-200"
                       >
                         {option.name}
                       </button>
@@ -115,19 +115,19 @@ const Navbar = () => {
             ))}
             <button
               onClick={() => handleNavigation("/pricing")}
-              className="text-black hover:text-gray-800"
+              className="text-[#4A90A7] hover:text-[#2C5364] transition-colors duration-200"
             >
               Pricing
             </button>
             <button
               onClick={() => handleNavigation("/login")}
-              className="text-black hover:text-gray-800"
+              className="text-[#4A90A7] hover:text-[#2C5364] transition-colors duration-200"
             >
               Log In
             </button>
             <button
               onClick={() => handleNavigation("/signup")}
-              className="border-2 border-black px-4 py-2 rounded-xl hover:border-gray-400 "
+              className="border-2 border-[#E57F84] text-[#E57F84] px-4 py-2 rounded-xl hover:bg-[#FDF1F1] transition-colors duration-200"
             >
               Sign Up Now
             </button>
@@ -137,7 +137,7 @@ const Navbar = () => {
           <div className="flex md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-gray-600 hover:text-gray-800 focus:outline-none"
+              className="text-[#4A90A7] hover:text-[#2C5364] focus:outline-none transition-colors duration-200"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -164,7 +164,7 @@ const Navbar = () => {
           <div className="p-4">
             <button
               onClick={() => setMobileMenuOpen(false)}
-              className="text-gray-600 hover:text-gray-800 focus:outline-none mb-4"
+              className="text-[#4A90A7] hover:text-[#2C5364] focus:outline-none mb-4 transition-colors duration-200"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -186,7 +186,7 @@ const Navbar = () => {
                 <div key={index}>
                   <button
                     onClick={() => toggleMobileDropdown(index)}
-                    className="font-semibold text-gray-800 flex justify-between w-full"
+                    className="font-semibold text-[#4A90A7] hover:text-[#2C5364] flex justify-between w-full transition-colors duration-200"
                   >
                     {menu}
                     <svg
@@ -208,7 +208,7 @@ const Navbar = () => {
                         <li key={optionIndex}>
                           <button
                             onClick={() => handleNavigation(option.path)}
-                            className="block text-gray-600 hover:text-gray-800"
+                            className="block text-[#4A90A7] hover:text-[#2C5364] transition-colors duration-200"
                           >
                             {option.name}
                           </button>
@@ -220,19 +220,19 @@ const Navbar = () => {
               ))}
               <button
                 onClick={() => handleNavigation("/pricing")}
-                className="block text-gray-600 hover:text-gray-800"
+                className="block text-[#4A90A7] hover:text-[#2C5364] transition-colors duration-200"
               >
                 Pricing
               </button>
               <button
                 onClick={() => handleNavigation("/login")}
-                className="block text-gray-600 hover:text-gray-800"
+                className="block text-[#4A90A7] hover:text-[#2C5364] transition-colors duration-200"
               >
                 Log In
               </button>
               <button
                 onClick={() => handleNavigation("/signup")}
-                className="block text-gray-600 hover:text-gray-800 border-2 border-black px-4 py-2 rounded-xl hover:border-gray-400 "
+                className="block w-full text-[#E57F84] border-2 border-[#E57F84] px-4 py-2 rounded-xl hover:bg-[#FDF1F1] transition-colors duration-200"
               >
                 Sign Up Now
               </button>
